@@ -1,0 +1,13 @@
+PLAN:
+*I forgot to plan first and already did the getComputerChoice function, but it was easy*
+
+
+
+how will I order the answers?
+options: array? object? 
+
+or i could just hardcode it and find a way to make the code shorter later. (coming back to this, I don't think I need to change it, it's not as bad as I thought)
+
+in order to make the player selection be case-insensitive, I'll make both answers lowercase.
+
+the game function seems pretty straightforward, I don't think I'll need to plan anything.
