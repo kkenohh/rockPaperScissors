@@ -1,11 +1,21 @@
+/*
+    capitalizes the first letter of the given
+    string and lowercases the rest
+*/
 function capitalize(string) {
     return string[0].toUpperCase() + string.substr(1).toLowerCase();
 }
 
+/*
+    returns a random int from the range given (non-inclusive)
+*/
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+/* 
+    returns a random rock, paper, scissors selection for the computer 
+*/
 function getComputerChoice() {
     let choice = getRandomInt(3);
     switch (choice) {
@@ -22,6 +32,10 @@ function getComputerChoice() {
     return choice;
 }
 
+/* 
+    compares the users choice to the computers to decide who won the round
+    or if it was a tie
+*/
 function playRound(player, computer) {
     if ((player == "Rock" && computer == "Paper") || 
             (player == "Paper" && computer == "Scissors") || 
@@ -42,6 +56,9 @@ function playRound(player, computer) {
     }
 }
 
+/* 
+    plays a game of rock, paper, scissors, best of 5
+*/
 function game() {
     let player;
     let computer;
@@ -71,6 +88,9 @@ function game() {
     count >= 3 ? console.log("You Win! Computer says: well played") : console.log("You Lose! Computer says: gg ez ur trash");
 }
 
+/* 
+    helper function for game()
+*/
 function helper(result, player, computer) {
     if (result == 0) {
         console.log(`You Lose! ${computer} beats ${player}`);
