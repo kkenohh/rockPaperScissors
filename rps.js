@@ -62,7 +62,8 @@ function playRound(player, computer) {
 function game() {
     let player;
     let computer;
-    let count = 0;
+    let playerCount = 0;
+    let comCount = 0;
     alert("You will be playing a game of Rock, Paper, Scissors, best of 5. Are you ready?")
 
     for (let i = 0; i < 5; i++) {
@@ -78,8 +79,8 @@ function game() {
             result = playRound(player, computer);
             path = helper(result, player, computer);
         }
-
-        count += path;
+        if (path == 0) comCount++;
+        playerCount += path;
         if (count >= 3) {
             break;
         }
