@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./styles.css">
-        <script src="./rps.js"></script>
+        <script src="https://kit.fontawesome.com/7ec95a532d.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="main">
@@ -17,9 +17,46 @@
                 </label>
             </div>
             <div id="game">
-                
+
+                <div id="tracker">
+                    <div class="scoreboard">
+                        <div class="name">PLAYER</div>
+                        <div class="player points">0</div>
+                        <div class="icon"></div>
+                    </div>
+
+                    <div class="vs text">VS</div>
+
+                    <div class="scoreboard">
+                        <div class="name">COMPUTER</div>
+                        <div class="computer points">0</div>
+                        <div class="icon"></div>
+                    </div>
+                </div>
+
+                <div id="button-wrapper">
+                    <div class="option">
+                        <button type="button" class="button"></button>
+                        <p class="choice text">Rock</p>
+                    </div>
+                    
+                    <div class="option">
+                        <button type="button" class="button"></button>
+                        <p class="choice text">Paper</p>
+                    </div>
+
+                    <div class="option">
+                        <button type="button" class="button"></button>
+                        <p class="choice text">Scissors</p>
+                    </div>
+                </div>
+
+                <div id="result"></div>
+
             </div>
             <div id="bottom"></div>
         </div>
     </body>
+    <script src="./rps.js"></script>
+    <script src="./mode.js"></script>
 </html>
