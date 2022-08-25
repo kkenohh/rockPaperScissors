@@ -56,14 +56,21 @@ function playRound(player, computer) {
     }
 }
 
+let playerCount = 0;
+let comCount = 0;
+const playerScore = document.querySelector('.player');
+const computerScore = document.querySelector('.computer');
+
 /* 
     plays a game of rock, paper, scissors, best of 5
 */
 function game() {
     let player;
     let computer;
-    let playerCount = 0;
-    let comCount = 0;
+    playerCount = 0;
+    comCount = 0;
+    playerScore.textContent = `${playerCount}`;
+    computerScore.textContent = `${comCount}`;
     alert("You will be playing a game of Rock, Paper, Scissors, best of 5. Are you ready?")
 
     for (let i = 0; i < 5; i++) {
@@ -79,14 +86,15 @@ function game() {
             result = playRound(player, computer);
             path = helper(result, player, computer);
         }
+        
         if (path == 0) comCount++;
         playerCount += path;
-        if (count >= 3) {
-            break;
-        }
+        playerScore.textContent = `${playerCount}`;
+        computerScore.textContent = `${comCount}`;
+        if (playerCount === 3 || comCount === 3) break;
     }
 
-    count >= 3 ? console.log("You Win! Computer says: well played") : console.log("You Lose! Computer says: gg ez ur trash");
+    playerCount >= 3 ? console.log("You Win! Computer says: well played") : console.log("You Lose! Computer says: gg ez ur trash");
 }
 
 /* 
@@ -103,3 +111,7 @@ function helper(result, player, computer) {
         return 2;
     }
 }
+
+
+
+
