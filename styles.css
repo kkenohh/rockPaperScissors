@@ -2,7 +2,7 @@
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+
     --light-primary: rgb(255, 236, 218);
     --light-secondary: #333;
     --light-tertiary: #ffaa00;
@@ -14,10 +14,15 @@ body {
     margin: 0 auto;
     padding: 0;
     background-color: var(--light-primary);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text {
     color: var(--light-secondary);
+}
+
+.tertiary {
+    color: var(--light-tertiary);
 }
 
 #main {
@@ -88,6 +93,12 @@ body {
     gap: 100px;
 }
 
+#main-text {
+    font-size: 36px;
+    border-bottom: 4px solid var(--light-secondary);
+    padding-bottom: 20px;
+}
+
 /* SCOREBOARD */
 
 #tracker {
@@ -108,6 +119,7 @@ body {
 .name, .points {
     font-size: 24px;
     font-weight: 900;
+    transition: .3s;
 }
 
 .vs {
@@ -117,6 +129,7 @@ body {
 .icon {
     width: 100px;
     height: 100px;
+    color: var(--light-tertiary);
 }
 
 /* buttons */
@@ -140,6 +153,9 @@ body {
 }
 
 .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     margin: 0;
     width: 200px;
@@ -155,3 +171,43 @@ body {
     border-color: var(--light-tertiary);
     cursor: pointer;
 }
+
+.button:hover i {
+    color: var(--light-tertiary);
+}
+
+i {
+    color: var(--light-secondary);
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+}
+
+/* reset button */
+
+#reset {
+    width: 200px;
+    height: 100px;
+    font-size: 24px;
+    background-color: var(--light-primary);
+    border: 4px solid var(--light-secondary);
+    border-radius: 20px;
+    transition: .3s;
+}
+
+#reset:hover {
+    color: var(--light-tertiary);
+    border-color: var(--light-tertiary);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* colors */
+ .red {
+    color: #fd7878;
+ }
+
+ .green {
+    color: #85ca85;
+    transform: scale(1.2);
+ }
