@@ -18,45 +18,45 @@
             </div>
             <div id="game">
 
+                <div id="main-text" class="text">Rock, Paper, Scissors. First to 5. <span class="tertiary">Ready?</span></div>
+
                 <div id="tracker">
                     <div class="scoreboard">
-                        <div class="name">PLAYER</div>
+                        <div class="player name">PLAYER</div>
                         <div class="player points">0</div>
-                        <div class="icon"></div>
+                        <div class="player icon"></div>
                     </div>
 
                     <div class="vs text">VS</div>
 
                     <div class="scoreboard">
-                        <div class="name">COMPUTER</div>
+                        <div class="computer name">COMPUTER</div>
                         <div class="computer points">0</div>
-                        <div class="icon"></div>
+                        <div class="computer icon"></div>
                     </div>
                 </div>
 
                 <div id="button-wrapper">
                     <div class="option">
-                        <button type="button" class="button"></button>
+                        <button class="rock button" type="button"><i class="rock fa-regular fa-hand-back-fist fa-8x"></i></button>
                         <p class="choice text">Rock</p>
                     </div>
                     
                     <div class="option">
-                        <button type="button" class="button"></button>
+                        <button class="paper button" type="button"><i class="paper fa-regular fa-hand fa-8x"></i></button>
                         <p class="choice text">Paper</p>
                     </div>
 
                     <div class="option">
-                        <button type="button" class="button"></button>
+                        <button class="scissors button" type="button"><i class="scissors fa-regular fa-hand-scissors fa-8x"></i></button>
                         <p class="choice text">Scissors</p>
                     </div>
+                    
                 </div>
-
-                <div id="result"></div>
-
+                <button id="reset" class="text">Reset Game</button>
             </div>
             <div id="bottom"></div>
         </div>
     </body>
     <script src="./rps.js"></script>
-    <script src="./mode.js"></script>
 </html>
