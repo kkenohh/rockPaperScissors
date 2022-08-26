@@ -127,7 +127,7 @@ function playRound(e) {
         }
     } else {
 
-        mainText.textContent = "Y'all tied. Go again.";
+        mainText.textContent = "We tied. Go again.";
 
     }
     if (playerCount == 5 || comCount == 5) {

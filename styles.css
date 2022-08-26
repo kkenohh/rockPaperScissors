@@ -95,8 +95,8 @@ body {
 
 #main-text {
     font-size: 36px;
-    border-bottom: 4px solid var(--light-secondary);
-    padding-bottom: 20px;
+    /* border-bottom: 4px solid var(--light-secondary);
+    padding-bottom: 20px; */
 }
 
 /* SCOREBOARD */
