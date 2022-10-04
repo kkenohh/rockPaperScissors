@@ -95,10 +95,7 @@ function playRound(e) {
     let playerConvert = options[player + ''];
     let comConvert = options[computer + ''];
 
-    if ((player == 0 && computer == 1) || 
-        (player == 1 && computer == 2) || 
-        (player == 2 && computer == 0)) {
-            
+    if (computer > player || (computer == 0 & player == 2)) {
         comCount++;
         computerScore.textContent = `${comCount}`;
         computerName.classList.remove('red');
@@ -110,10 +107,7 @@ function playRound(e) {
         } else {
             mainText.textContent = `You lost this round. ${comConvert} beats ${playerConvert}`;
         }
-    } else if ((computer == 0 && player == 1) || 
-            (computer == 1 && player == 2) || 
-            (computer == 2 && player == 0)) {
-                
+    } else if (player > computer || (player == 0 & computer == 2)) {     
         playerCount++;
         playerScore.textContent = `${playerCount}`;
         computerName.classList.remove('green');
@@ -126,9 +120,7 @@ function playRound(e) {
             mainText.textContent = `You won this round. ${playerConvert} beats ${comConvert}`;
         }
     } else {
-
         mainText.textContent = "We tied. Go again.";
-
     }
     if (playerCount == 5 || comCount == 5) {
         buttons.forEach(button => button.disabled = true);

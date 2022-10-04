@@ -5,7 +5,7 @@
 
     --light-primary: rgb(255, 236, 218);
     --light-secondary: #333;
-    --light-tertiary: #ffaa00;
+    --light-tertiary: #ff7b00;
 }
 
 body {
@@ -163,7 +163,7 @@ body {
     border: 4px solid var(--light-secondary);
     background-color: var(--light-primary);
     border-radius: 20px;
-    transition: .3s;
+    transition: .5s;
 }
 
 .button:hover {
