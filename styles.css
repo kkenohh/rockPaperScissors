@@ -1,214 +1,225 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 
-    --light-primary: rgb(255, 236, 218);
-    --light-secondary: #333;
-    --light-tertiary: #ff7b00;
+  --light-primary: rgb(255, 236, 218);
+  --light-secondary: #333;
+  --light-tertiary: #ff7b00;
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 0;
-    background-color: var(--light-primary);
-    font-family: 'Montserrat', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--light-primary);
+  font-family: "Montserrat", sans-serif;
 }
 
 .text {
-    color: var(--light-secondary);
+  color: var(--light-secondary);
 }
 
 .tertiary {
-    color: var(--light-tertiary);
+  color: var(--light-tertiary);
 }
 
 #main {
-    margin: 0 auto;
-    padding: 0;
-    width: 1200px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 1200px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #mode {
-    padding: 32px 64px;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
+  padding: 32px 64px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .mode {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 #fill {
-    box-sizing: content-box;
-    position: relative;
-    appearance: none;
-    width: 72px;
-    height: 36px;
-    background: linear-gradient(to left, var(--light-tertiary), rgb(255, 228, 140));
-    border-radius: 36px;
-    border: 3px solid #bbb;
-    transition: .5s;
+  box-sizing: content-box;
+  position: relative;
+  appearance: none;
+  width: 72px;
+  height: 36px;
+  background: linear-gradient(
+    to left,
+    var(--light-tertiary),
+    rgb(255, 228, 140)
+  );
+  border-radius: 36px;
+  border: 3px solid #bbb;
+  transition: 0.5s;
 }
 
 #switch {
-    display: none;
+  display: none;
 }
 
 #switch:checked ~ #fill {
-    background: linear-gradient(to right, rgb(57, 58, 124), rgb(101, 125, 202));
+  background: linear-gradient(to right, rgb(57, 58, 124), rgb(101, 125, 202));
 }
 
 #switch:checked ~ #fill:after {
-    transform: translateX(36px);
+  transform: translateX(36px);
 }
 
 #fill::after {
-    content: '';
-    height: 36px;
-    width: 36px;
-    background-color:#fff;
-    border-radius: 36px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: .5s;
+  content: "";
+  height: 36px;
+  width: 36px;
+  background-color: #fff;
+  border-radius: 36px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
 }
 
 /* game */
 
 #game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
 }
 
 #main-text {
-    font-size: 36px;
-    /* border-bottom: 4px solid var(--light-secondary);
+  font-size: 36px;
+  /* border-bottom: 4px solid var(--light-secondary);
     padding-bottom: 20px; */
 }
 
 /* SCOREBOARD */
 
 #tracker {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
 }
 
 .scoreboard {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
 }
 
-.name, .points {
-    font-size: 24px;
-    font-weight: 900;
-    transition: .3s;
+.name,
+.points {
+  font-size: 24px;
+  font-weight: 900;
+  transition: 0.3s;
 }
 
 .vs {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .icon {
-    width: 100px;
-    height: 100px;
-    color: var(--light-tertiary);
+  width: 100px;
+  height: 100px;
+  color: var(--light-tertiary);
 }
 
 /* buttons */
 
 #button-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 60px;
 }
 
 .option {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .choice {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    width: 200px;
-    height: 200px;
-    border: 4px solid var(--light-secondary);
-    background-color: var(--light-primary);
-    border-radius: 20px;
-    transition: .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: 200px;
+  height: 200px;
+  border: 4px solid var(--light-secondary);
+  background-color: var(--light-primary);
+  border-radius: 20px;
+  transition: 0.5s;
 }
 
 .button:hover {
-    transform: scale(1.1);
-    border-color: var(--light-tertiary);
-    cursor: pointer;
+  transform: scale(1.1);
+  border-color: var(--light-tertiary);
+  cursor: pointer;
 }
 
 .button:hover i {
-    color: var(--light-tertiary);
+  color: var(--light-tertiary);
 }
 
 i {
-    color: var(--light-secondary);
-    margin: 0;
-    padding: 0;
-    transition: .3s;
+  color: var(--light-secondary);
+  margin: 0;
+  padding: 0;
+  transition: 0.3s;
 }
 
 /* reset button */
 
 #reset {
-    margin: 0;
-    width: 200px;
-    height: 100px;
-    font-size: 24px;
-    background-color: var(--light-primary);
-    border: 4px solid var(--light-secondary);
-    border-radius: 20px;
-    transition: .3s;
+  margin: 0;
+  width: 200px;
+  height: 100px;
+  font-size: 24px;
+  background-color: var(--light-primary);
+  border: 4px solid var(--light-secondary);
+  border-radius: 20px;
+  transition: 0.3s;
 }
 
 #reset:hover {
-    color: var(--light-tertiary);
-    border-color: var(--light-tertiary);
-    transform: scale(1.1);
-    cursor: pointer;
+  color: var(--light-tertiary);
+  border-color: var(--light-tertiary);
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* colors */
- .red {
-    color: #fd7878;
- }
+.red {
+  color: #fd7878;
+}
 
- .green {
-    color: #85ca85;
-    transform: scale(1.2);
- }
+.green {
+  color: #85ca85;
+  transform: scale(1.2);
+}
+
+#bottom {
+  padding: 4rem;
+}
